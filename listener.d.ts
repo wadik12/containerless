@@ -9,6 +9,7 @@ export declare class Listener implements Resource {
     calculatePriority(): number;
     readonly name: string;
     readonly targetGroupName: string;
+    readonly defaultListenerRule: string;
     readonly healthcheckPath: string;
     required(): number | "";
     generate(): any;

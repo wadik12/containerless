@@ -124,7 +124,7 @@ var Service = (function () {
         var resources = (_a = {},
             _a[this.name] = {
                 'Type': 'AWS::ECS::Service',
-                'DependsOn': [this.cluster.defaultListenerName, this.taskDefinitionName],
+                'DependsOn': [this.cluster.defaultListenerName, this.taskDefinitionName, this.listener.defaultListenerRule],
                 'Properties': {
                     'Cluster': this.cluster.id,
                     'DesiredCount': this.count,

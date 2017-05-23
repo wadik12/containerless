@@ -31,6 +31,10 @@ export class Listener implements Resource {
     return `${this.service.name}Target`;
   }
 
+  get defaultListenerRule() {
+    return `${this.service.name}HTTPRule`
+  }
+
   get healthcheckPath() {
     return `${this.service.healthcheckPath}`;
   }

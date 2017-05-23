@@ -26,6 +26,13 @@ var Listener = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Listener.prototype, "defaultListenerRule", {
+        get: function () {
+            return this.service.name + "HTTPRule";
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(Listener.prototype, "healthcheckPath", {
         get: function () {
             return "" + this.service.healthcheckPath;
